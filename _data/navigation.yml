@@ -1,8 +1,11 @@
-main_menu:
-
 - text: "Home"
     url: "/"
-    
+
+- text: "News"
+    url: "/blogs/index"
+
+main_menu:
+
   - text: "Pages"
     url: "/"
     menu_type: "dropdown"
@@ -223,6 +226,3 @@ main_menu:
       
       - text: "Portfolio 08"
         url: "/portfolios/index-8"
-
-- text: "News"
-    url: "/blogs/index"
