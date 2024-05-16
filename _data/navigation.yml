@@ -1,10 +1,9 @@
-- text: "Home"
+main_menu:
+  - text: "Home"
     url: "/"
 
-- text: "News"
+  - text: "News"
     url: "/blogs/index"
-
-main_menu:
 
   - text: "Pages"
     url: "/"
