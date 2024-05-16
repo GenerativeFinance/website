@@ -225,28 +225,4 @@ main_menu:
         url: "/portfolios/index-8"
 
   - text: "Blog"
-    url: "/"
-    submenu:
-      - text: "Blog 01"
-        url: "/blogs/index"
-
-      - text: "Blog 02"
-        url: "/blogs/index-2"
-
-      - text: "Blog 03"
-        url: "/blogs/index-3"
-
-      - text: "Blog 04"
-        url: "/blogs/index-4"
-
-      - text: "Blog 05"
-        url: "/blogs/index-5"
-
-      - text: "Blog 06"
-        url: "/blogs/index-6"
-
-      - text: "Blog 07"
-        url: "/blogs/index-7"
-
-      - text: "Blog 08"
-        url: "/blogs/index-8"
+    url: "/blogs/index"
