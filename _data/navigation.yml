@@ -2,43 +2,40 @@ main_menu:
   - text: "Home"
     url: "/"
 
-- text: "Marketplace"
-   url: "/"
-   menu_type: "megamenu"
-   submenu:
-          - text: "Browse AI Models"
-            url: "/#marketplace"
+  - text: "Marketplace"
+    url: "/"
+    menu_type: "megamenu"
+    submenu:
+      - text: "Browse AI Models"
+        url: "/#marketplace"
+      - text: "Top AI Models"
+        url: "/#featured-models"
 
-          - text: "Top AI Models"
-            url: "/#featured-models"
+  - text: "How It Works"
+    url: "/#how-it-works"
 
-- text: "How It Works"
-  url: "/#how-it-works"
-
-- text: "For Investors"
-  url: "/"
-  menu_type: "megamenu"
-  submenu:
+  - text: "For Investors"
+    url: "/"
+    menu_type: "megamenu"
+    submenu:
       - text: "Why AI Finance?"
         url: "/#benefits"
-
       - text: "Use Cases"
         url: "/#target-audience"
-
       - text: "Pricing Plans"
         url: "/#pricing"
 
   - text: "For Developers"
-    url: "/portfolios/"
+    url: "/"
+    menu_type: "megamenu"
     submenu:
       - text: "Monetize AI Models"
         url: "/#submit-model"
-
       - text: "Security & Compliance"
         url: "/#trust-security"
 
-- text: "Case Studies"
-  url: "/#testimonials"
+  - text: "Case Studies"
+    url: "/#testimonials"
 
-- text: "Get Started"
-  url: "/#call-to-action"
+  - text: "Get Started"
+    url: "/#call-to-action"
