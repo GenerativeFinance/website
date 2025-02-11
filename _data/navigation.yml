@@ -6,7 +6,6 @@ main_menu:
    url: "/"
    menu_type: "megamenu"
    submenu:
-
           - text: "Browse AI Models"
             url: "/#marketplace"
 
@@ -20,7 +19,6 @@ main_menu:
   url: "/"
   menu_type: "megamenu"
   submenu:
-
       - text: "Why AI Finance?"
         url: "/#benefits"
 
