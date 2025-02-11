@@ -3,13 +3,10 @@ main_menu:
     url: "/"
 
 - text: "Marketplace"
-    url: "/"
-    menu_type: "dropdown"
-    has_submenu: "true"
-    
-    label_two:
-      - sub_menu_text: "Marketplace"
-        sub_menu:
+   url: "/"
+   menu_type: "megamenu"
+   submenu:
+
           - text: "Browse AI Models"
             url: "/#marketplace"
 

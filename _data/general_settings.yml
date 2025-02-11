@@ -95,7 +95,7 @@ one_page_nav_settings:
   links:
     - text: "Home"
       url: "#home"
-    - text: "Services"
+    - text: "Marketplace"
       url: "#services"
     - text: "Experiences"
       url: "#experiences"
