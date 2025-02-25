@@ -11,9 +11,6 @@ main_menu:
       - text: "Top AI Models"
         url: "/#featured-models"
 
-  - text: "How It Works"
-    url: "/#how-it-works"
-
   - text: "For Investors"
     url: "/"
     menu_type: "megamenu"
@@ -33,9 +30,6 @@ main_menu:
         url: "/#submit-model"
       - text: "Security & Compliance"
         url: "/#trust-security"
-
-  - text: "Case Studies"
-    url: "/#testimonials"
 
   - text: "Get Started"
     url: "/#call-to-action"
