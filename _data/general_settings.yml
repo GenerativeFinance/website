@@ -26,20 +26,17 @@ google_map: |
 social_accounts:
   title: "Follow Us"
   links:
-    - url: "#"
+    - url: "https://x.com/generativefi"
       icon: "jam jam-twitter"
 
-    - url: "#"
+    - url: "https://www.facebook.com/generativefinance"
       icon: "jam jam-facebook"
 
-    - url: "#"
-      icon: "jam jam-instagram"
+    - url: "https://www.linkedin.com/company/generativefinance"
+      icon: "jam jam-linkedin"
 
-    - url: "#"
-      icon: "jam jam-vimeo"
-      
-    - url: "#"
-      icon: "jam jam-youtube"
+    - url: "https://medium.com/generativefinance"
+      icon: "jam jam-medium"
 
 
 external_links:
