@@ -43,15 +43,13 @@ external_links:
   title: "Learn More"
   links:
     - url: "#"
-      text: "About Us"
+      text: "Marketplace"
     - url: "#"
-      text: "Our Story"
+      text: "For Investors"
     - url: "#"
-      text: "Projects"
+      text: "For Developers"
     - url: "#"
-      text: "Pricing"
-    - url: "#"
-      text: "Features"
+      text: "Get Started"
 
 
 external_links_02:
