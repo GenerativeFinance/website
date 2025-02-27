@@ -12,7 +12,7 @@ main_menu:
         url: "/#featured-models"
 
   - text: "For Investors"
-    url: "/"
+    url: "/investors"
     menu_type: "megamenu"
     submenu:
       - text: "Why AI Finance?"
@@ -23,7 +23,7 @@ main_menu:
         url: "/#pricing"
 
   - text: "For Developers"
-    url: "/"
+    url: "/developers"
     menu_type: "megamenu"
     submenu:
       - text: "Monetize AI Models"
