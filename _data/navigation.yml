@@ -1,6 +1,5 @@
 main_menu:
   - text: "Home"
-    url: "/"
 
   - text: "Marketplace"
     url: "/"
