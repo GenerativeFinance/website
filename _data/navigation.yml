@@ -22,4 +22,4 @@ main_menu:
         url: "/#pricing"
 
   - text: "Pricing"
-    url: "/#pricing_table"
+    url: "/#pricing"
