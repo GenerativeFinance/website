@@ -5,7 +5,7 @@ date: 2025-09-15 20:37:13 +0600
 author: "Tortoiz Themes"
 post_image: "/assets/images/art/tb1.jpg"
 badge_color: "bg-purple"
-categories: [digita assets]
+categories: [Risk management]
 slider_post: true
 ---
 
