@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Macro Regime Detector (MRD)"
-date: 2020-09-02 20:37:13 +0600
+date: 2025-09-10 20:37:13 +0600
 post_image: "/assets/images/art/bg2.png"
 badge_color: "bg-leaf"
 categories: [Macroeconomic]
