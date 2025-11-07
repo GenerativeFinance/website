@@ -209,6 +209,7 @@ faq_area:
     {% else %}
     <!-- Text-based Workflow Diagram (from FAIF.pdf Page 3) -->
     <pre class="workflow-diagram" style="font-family: monospace; white-space: pre; background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 0.5rem; overflow-x: auto;">
+<div class="mermaid">
 flowchart TD
     A[Developers / Institutions / Providers]
     B[Local Agents]
@@ -225,6 +226,8 @@ flowchart TD
     B --> C
     B --> D
     D --> E --> F --> G --> H --> I --> J
+</div>
+
     </pre>
     <p class="text-center mt-3">Key: Privacy via homomorphic encryption & differential privacy. Evolve models collaboratively.</p>
     {% endif %}
