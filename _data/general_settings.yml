@@ -46,16 +46,16 @@ social_accounts:
 
 
 external_links:
-  title: "Learn More"
+  title: "Legal & Privacy"
   links:
-    - url: "#"
-      text: "Marketplace"
-    - url: "#"
-      text: "For Investors"
-    - url: "#"
-      text: "For Developers"
-    - url: "#"
-      text: "Get Started"
+    - url: "tos.html"
+      text: "Terms of Service"
+    - url: "privacy-policy.html"
+      text: "Privacy Policy"
+    - url: "dpa.html"
+      text: "Data Processing Agreement"
+    - url: "cookie-policy.html"
+      text: "Cookie Policy"
 
 
 external_links_02:
