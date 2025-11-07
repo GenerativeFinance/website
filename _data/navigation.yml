@@ -2,7 +2,7 @@ main_menu:
   - text: "Home"
 
   - text: "Pillars"
-    url: "/#features-area"
+    url: "/#pillars"
 
   - text: "Marketplace"
     url: "/#portfolio"
