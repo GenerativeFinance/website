@@ -4,7 +4,7 @@ title: "Macro Regime Detector (MRD)"
 date: 2020-09-02 20:37:13 +0600
 post_image: "/assets/images/art/bg2.png"
 badge_color: "bg-leaf"
-categories: [architecture]
+categories: [Macroeconomic]
 slider_post: true
 ---
 
@@ -27,6 +27,8 @@ MRD is designed to detect **8+ economic and market regimes**, including:
 - Currency/FX Crisis  
 
 Each regime is evaluated using multimodal macro signals, interpreted through a hybrid architecture combining **Transformers, Hidden Markov Models, Bayesian transitions, and explainability layers**.
+
+
 
 ## 🔧 Core Model Architecture
 
@@ -54,6 +56,8 @@ Encrypted Gradients → Secure Aggregation
 | **Federated Training** | FedProx + Differential Privacy | Aggregates model parameters without sharing raw data |
 | **Explainability** | SHAP + HMM Path Attribution | Identifies drivers of regime change |
 
+
+
 ## 🔁 Training & Federated Learning Loop
 
 MRD trains across institutions without centralizing data.
@@ -73,6 +77,8 @@ MRD trains across institutions without centralizing data.
 5. **Incentive Rewards**  
    Smart contracts assign rewards based on accuracy contributions.
 
+
+
 ## 📊 Model Performance Targets
 
 | Metric | Result |
@@ -83,6 +89,8 @@ MRD trains across institutions without centralizing data.
 | **AI Confidence Score** | 92.1% average |
 
 > MRD’s advantage: its ability to **detect regime transitions before markets price them in**.
+
+
 
 ## 🧩 Why MRD Works
 
@@ -104,6 +112,8 @@ Every regime shift comes with a transparent breakdown of its drivers:
 - Geopolitical shock
 - Liquidity withdrawal
 
+
+
 ## 🚀 Roadmap for the Model
 
 **MRD v2 (2026)** will introduce:  
@@ -111,6 +121,8 @@ Every regime shift comes with a transparent breakdown of its drivers:
 ✅ Central Bank Synthetic Simulations  
 ✅ Quantum-Enhanced HMM State Decoding  
 ✅ Multi-Agent Regime Negotiation Models  
+
+
 
 ### Final Word
 
