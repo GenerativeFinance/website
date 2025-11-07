@@ -209,19 +209,22 @@ faq_area:
     {% else %}
     <!-- Text-based Workflow Diagram (from FAIF.pdf Page 3) -->
     <pre class="workflow-diagram" style="font-family: monospace; white-space: pre; background: #1a1a1a; color: #fff; padding: 1rem; border-radius: 0.5rem; overflow-x: auto;">
-Developers + Institutions + Providers
-           ↓
-Local Agents (train on private data)
-           ↓ (encrypted updates)
-Federated Orchestrator
-           ↓
-Secure Aggregation (FedAvg, FedProx)
-           ↓
-Compliance Engine → Regulator Notifier
-           ↓
-Contribution Ledger / Smart Contracts
-           ↓
-GeFi Marketplace ← Rewards Distribution
+flowchart TD
+    A[Developers / Institutions / Providers]
+    B[Local Agents]
+    C[[Private Data Remains Local]]
+    D((Encrypted Updates))
+    E[Federated Orchestrator]
+    F[Secure Aggregation<br/>(FedAvg, FedProx)]
+    G[Compliance Engine<br/>(Regulator Notifier)]
+    H[Contribution Ledger<br/>+ Smart Contracts]
+    I[Token + Rewards Distribution]
+    J[GeFi Marketplace]
+
+    A --> B
+    B --> C
+    B --> D
+    D --> E --> F --> G --> H --> I --> J
     </pre>
     <p class="text-center mt-3">Key: Privacy via homomorphic encryption & differential privacy. Evolve models collaboratively.</p>
     {% endif %}
