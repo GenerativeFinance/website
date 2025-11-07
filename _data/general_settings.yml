@@ -62,15 +62,13 @@ external_links_02:
   title: "Need Help?"
   links:
     - url: "#"
-      text: "Support"
+      text: "General Support"
     - url: "#"
-      text: "Get Started"
+      text: "Privacy Officer"
     - url: "#"
-      text: "Contact Us"
+      text: "Security Team"
     - url: "#"
-      text: "Terms of Use"
-    - url: "#"
-      text: "Privacy Policy"
+      text: "Enterprise Sales"
 
 
 external_links_03:

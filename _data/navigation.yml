@@ -4,7 +4,7 @@ main_menu:
   - text: "Pillars"
     url: "/#pillars"
 
-  - text: "Marketplace"
+  - text: "Platform"
     url: "/#portfolio"
 
   - text: "Pricing"
