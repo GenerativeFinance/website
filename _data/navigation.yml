@@ -1,25 +1,11 @@
 main_menu:
   - text: "Home"
 
-  - text: "Marketplace"
-    url: "/"
-    menu_type: "megamenu"
-    submenu:
-      - text: "Browse AI Models"
-        url: "/#marketplace"
-      - text: "Top AI Models"
-        url: "/#featured-models"
+  - text: "Platform"
+    url: "/#features-area"
 
-  - text: "For Investors"
-    url: "/investors"
-    menu_type: "megamenu"
-    submenu:
-      - text: "Why AI Finance?"
-        url: "/#benefits"
-      - text: "Use Cases"
-        url: "/#target-audience"
-      - text: "Pricing Plans"
-        url: "/#pricing"
+  - text: "Marketplace"
+    url: "/#portfolio"
 
   - text: "Pricing"
     url: "/#pricing"
