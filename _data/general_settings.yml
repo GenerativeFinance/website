@@ -48,13 +48,13 @@ social_accounts:
 external_links:
   title: "Legal & Privacy"
   links:
-    - url: "/tos"
+    - url: "https://gefi.io/tos"
       text: "Terms of Service"
-    - url: "privacy-policy.html"
+    - url: "https://gefi.io/privacy-policy"
       text: "Privacy Policy"
-    - url: "dpa.html"
+    - url: "https://gefi.io/dpa"
       text: "Data Processing"
-    - url: "cookie-policy"
+    - url: "https://gefi.io/cookie-policy"
       text: "Cookie Policy"
 
 
