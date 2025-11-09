@@ -48,13 +48,13 @@ social_accounts:
 external_links:
   title: "Legal & Privacy"
   links:
-    - url: "/tos"
+    - url: "{{ site.baseurl }}/tos"
       text: "Terms of Service"
-    - url: "/privacy-policy"
+    - url: "{{ site.baseurl }}/privacy-policy"
       text: "Privacy Policy"
-    - url: "/dpa"
+    - url: "{{ site.baseurl }}/dpa"
       text: "Data Processing"
-    - url: "/cookie-policy"
+    - url: "{{ site.baseurl }}/cookie-policy"
       text: "Cookie Policy"
 
 
