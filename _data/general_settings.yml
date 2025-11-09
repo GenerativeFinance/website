@@ -54,7 +54,7 @@ external_links:
       text: "Privacy Policy"
     - url: "/dpa"
       text: "Data Processing"
-    - url: "{{ site.baseurl }}/cookie-policy"
+    - url: "/cookie-policy"
       text: "Cookie Policy"
 
 
