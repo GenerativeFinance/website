@@ -56,7 +56,7 @@ Encrypted Gradients → Secure Aggregation
 | **Federated Training** | FedProx + Differential Privacy | Aggregates model parameters without sharing raw data |
 | **Explainability** | SHAP + HMM Path Attribution | Identifies drivers of regime change |
 
-
+---
 
 ## 🔁 Training & Federated Learning Loop
 
