@@ -4,6 +4,9 @@ main_menu:
   - text: "Pillars"
     url: "/#pillars"
 
+  - text: "Pillars"
+    url: "/#workflow"
+
   - text: "Platform"
     url: "/#portfolio"
 
