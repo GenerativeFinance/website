@@ -1,7 +1,7 @@
 # General Settings
-title: "Snowlake premium jekyll template"
+title: "GeFi"
 email: ""
-email_2: "support@tortoizthemes.com"
+email_2: ""
 description: >- # this means to ignore newlines until "baseurl:"
   A platform for AI financial models, enabling advanced analytics, 
   predictive insights, and automated decision-making for risk assessment, trading, 
@@ -14,7 +14,7 @@ light_logo_2x: "/assets/images/logo-light@2x.png"
 
 address_01: 'Rue Robert-Céard 6,<br> 1204 Geneva,<br /> Switzerland'
 phone_number: ""
-copyright_text: "© 2025 GeFi Technologies pte ltd. All rights reserved."
+copyright_text: "© 2025 GeFi Generative Finance pte ltd. All rights reserved."
 
 google_analytics:
   enable: false
