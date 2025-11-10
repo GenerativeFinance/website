@@ -1,7 +1,7 @@
-<nav
-  class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
-  <div
-    class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
+<nav class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
+  <div class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
+
+    <!-- Logo -->
     <div class="navbar-brand">
       <a href="{{site.url}}">
         {% if include.light_logo %}
@@ -16,6 +16,8 @@
           alt="{{site.data.general_settings.title}}" />
       </a>
     </div>
+
+    <!-- Navbar Other (Hamburger, Search, Cart) -->
     <div class="navbar-other ml-auto order-lg-3">
       <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
         <li class="nav-item">
@@ -35,83 +37,91 @@
                 <input type="text" id="search-input" class="form-control" placeholder="Search AI Financial Models.." />
                 <i class="dropdown-close jam jam-close"></i>
               </form>
-              <!-- /.search-form -->
             </div>
-            <!-- /.form-wrapper -->
             <ul id="results-container" class="position-static"></ul>
           </div>
         </li>
-        <li class="nav-item"><button class="plain" data-toggle="offcanvas-info"><i class="jam jam-user"></i></button>
+        <li class="nav-item">
+          <button class="plain" data-toggle="offcanvas-info"><i class="jam jam-user"></i></button>
         </li>
       </ul>
-      <!-- /.navbar-nav -->
     </div>
-    <!-- /.navbar-other -->
+
+    <!-- Offcanvas Nav (Hamburger Left Menu) -->
     <div class="navbar-collapse offcanvas-nav">
       <div class="offcanvas-header d-lg-none d-xl-none">
         <a href="{{site.url}}">
           <img src="{{site.data.general_settings.light_logo_1x}}"
             srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x"
-            alt="{{site.data.general_settings.title}}" /></a>
+            alt="{{site.data.general_settings.title}}" />
+        </a>
         <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
       </div>
+
+      <!-- Main Menu Items -->
       <ul class="navbar-nav {% if include.alignment_class %} {{include.alignment_class}} {% else %} mx-auto {% endif %}">
         {% for menu in site.data.navigation.main_menu %}
-        {% assign check_menu = menu.menu_type %}
-        {% case check_menu %}
-        {% when "megamenu" %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu mega-menu boxed list-view text-left">
-            <li class="mega-menu-content">
-              <div class="row">
-                {% for column in menu.submenu cols: 4 %}
-                <div class="col-lg-3">
-                  <ul class="list-unstyled">
-                    <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
-                  </ul>
-                </div>
-                <!--/column -->
-                {% endfor %}
-              </div>
-              <!--/.row -->
-            </li>
-            <!--/.mega-menu-content-->
-          </ul>
-          <!--/.dropdown-menu -->
-        </li>
-        {% when "dropdown" %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu">
-            {% for label_two in menu.label_two %}
-            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{label_two.sub_menu_text}}</a>
-              <ul class="dropdown-menu">
-                {% for sub_menu in label_two.sub_menu %}
-                <li class="nav-item"><a class="dropdown-item" href="{{sub_menu.url}}">{{sub_menu.text}}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-            {% endfor %}
-            {% if menu.submenu %}
-            {% for label_one in menu.submenu %}
-            <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
-        </li>
-        {% else %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-        </li>
-        {% endcase %}
+          {% assign check_menu = menu.menu_type %}
+          {% case check_menu %}
+            {% when "megamenu" %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+                <ul class="dropdown-menu mega-menu boxed list-view text-left">
+                  <li class="mega-menu-content">
+                    <div class="row">
+                      {% for column in menu.submenu cols: 4 %}
+                        <div class="col-lg-3">
+                          <ul class="list-unstyled">
+                            <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
+                          </ul>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            {% when "dropdown" %}
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+                <ul class="dropdown-menu">
+                  {% for label_two in menu.label_two %}
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{label_two.sub_menu_text}}</a>
+                      <ul class="dropdown-menu">
+                        {% for sub_menu in label_two.sub_menu %}
+                          <li class="nav-item"><a class="dropdown-item" href="{{sub_menu.url}}">{{sub_menu.text}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% endfor %}
+                  {% if menu.submenu %}
+                    {% for label_one in menu.submenu %}
+                      <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a></li>
+          {% endcase %}
         {% endfor %}
       </ul>
-      <!-- /.navbar-nav -->
+
+      <!-- Social Media Section -->
+      <div class="offcanvas-social mt-4 text-center">
+        <h5 class="widget-title">Follow Us</h5>
+        <ul class="social social-mute justify-content-center">
+          {% for social_info in site.data.general_settings.social_accounts.links %}
+            <li><a href="{{social_info.url}}" target="_blank"><i class="{{social_info.icon}}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
     <!-- /.navbar-collapse -->
+
   </div>
   <!-- /.container-fluid -->
 </nav>
-<!-- /.navbar -->
+
+<!-- Offcanvas Info Panel (User/Contact) -->
 <div class="offcanvas-info inverse-text">
   <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
   <a href="{{site.url}}">
@@ -130,28 +140,24 @@
       {{site.data.general_settings.phone_number}}
     </address>
   </div>
-  <!-- /.widget -->
   <div class="widget">
     {% if site.data.general_settings.external_links.title %}
-    <h3 class="widget-title">{{site.data.general_settings.external_links.title}}</h3>
+      <h3 class="widget-title">{{site.data.general_settings.external_links.title}}</h3>
     {% endif %}
     <ul class="list-unstyled">
       {% for external_link in site.data.general_settings.external_links.links %}
-      <li><a href="{{external_link.url}}" class="nocolor">{{external_link.text}}</a></li>
+        <li><a href="{{external_link.url}}" class="nocolor">{{external_link.text}}</a></li>
       {% endfor %}
     </ul>
   </div>
-  <!-- /.widget -->
   <div class="widget">
     {% if site.data.general_settings.social_accounts.title %}
-    <h3 class="widget-title">{{site.data.general_settings.social_accounts.title}}</h3>
+      <h3 class="widget-title">{{site.data.general_settings.social_accounts.title}}</h3>
     {% endif %}
     <ul class="social social-mute social-s ml-auto">
       {% for social_info in site.data.general_settings.social_accounts.links %}
-      <li><a href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
+        <li><a href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
       {% endfor %}
     </ul>
   </div>
-  <!-- /.widget -->
 </div>
-<!-- /.offcanvas-info -->

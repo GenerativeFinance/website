@@ -38,9 +38,6 @@ social_accounts:
     - url: "https://medium.com/generativefinance"
       icon: "jam jam-medium"
 
-    - url: "https://vimeo.com/gefi"
-      icon: "jam jam-vimeo"
-
     - url: "https://www.youtube.com/@generativefinance"
       icon: "jam jam-youtube"
 
