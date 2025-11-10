@@ -100,6 +100,10 @@
           </ul>
         </li>
         {% else %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+        </li>
+        {% endcase %}
+        {% endfor %}
       </ul>
       <!-- /.navbar-nav -->
     </div>
