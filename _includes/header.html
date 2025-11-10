@@ -100,21 +100,6 @@
           </ul>
         </li>
         {% else %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu">
-            {% if menu.label_two %}
-            {% for label_two in menu.label_two %}
-            {% endfor %}
-            {% endif %}
-            {% if menu.submenu %}
-            {% for label_one in menu.submenu %}
-            <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
-        </li>
-        {% endcase %}
-        {% endfor %}
       </ul>
       <!-- /.navbar-nav -->
     </div>
