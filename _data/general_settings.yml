@@ -58,7 +58,7 @@ external_links:
 external_links_02:
   title: "Need Help?"
   links:
-    - url: "/support"
+    - url: ""
       text: "General Support"
     - url: "#"
       text: "Privacy Officer"
