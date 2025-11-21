@@ -1,0 +1,120 @@
+<style>
+  .gefi-workflow { max-width: 1100px; margin: 2rem auto; padding: 1rem; }
+  .wf-caption { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#334155; margin-bottom:0.6rem; }
+  .wf-svg { width:100%; height:auto; display:block; }
+  .wf-node { fill:#0f172a; fill-opacity:0.06; stroke:#0f172a; stroke-opacity:0.12; rx:10; }
+  .wf-text { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill:#0f172a; font-size:14px; font-weight:600 }
+  .wf-sub { font-size:12px; font-weight:500; fill:#475569 }
+  .wf-note { font-size:11px; fill:#64748b }
+  .wf-arrow { stroke:#0f172a; stroke-opacity:0.7; stroke-width:2; fill:none; marker-end: url(#arrowhead); }
+  .wf-small { font-size:12px; fill:#0f172a; font-weight:500 }
+  .wf-box { filter: drop-shadow(0 6px 14px rgba(2,6,23,0.06)); }
+  @media (max-width:700px){ .wf-text{font-size:12px} .wf-sub{font-size:11px} .wf-note{font-size:10px} }
+</style>
+
+<div class="gefi-workflow">
+  <div class="wf-caption">
+    <strong>GeFi — Summary of Data & Model Flow</strong>
+    <div class="wf-note">Privacy-preserving, federated training with secure aggregation & blockchain incentives.</div>
+  </div>
+
+  <svg class="wf-svg" viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GeFi workflow diagram">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
+        <path d="M0,0 L10,4 L0,8 z" fill="#0f172a" fill-opacity="0.8"/>
+      </marker>
+      <linearGradient id="g1" x1="0" x2="1">
+        <stop offset="0%" stop-color="#0ea5a4" stop-opacity="0.12"/>
+        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Developers / FI / Data Providers -->
+    <g transform="translate(40,20)">
+      <rect class="wf-node wf-box" x="0" y="0" width="260" height="64"></rect>
+      <text x="20" y="28" class="wf-text">Developers • Financial Institutions • Data Providers</text>
+      <text x="20" y="48" class="wf-sub">(local + private datasets)</text>
+    </g>
+
+    <!-- Local Model Agents -->
+    <g transform="translate(340,20)">
+      <rect class="wf-node wf-box" x="0" y="0" width="220" height="64"></rect>
+      <text x="16" y="28" class="wf-text">Local Model Agents</text>
+      <text x="16" y="48" class="wf-sub">train on device / on-prem</text>
+    </g>
+
+    <path class="wf-arrow" d="M300 52 L340 52"/>
+    <text x="275" y="70" class="wf-small">encrypted updates →</text>
+
+    <!-- Orchestrator -->
+    <g transform="translate(620,20)">
+      <rect class="wf-node wf-box" x="0" y="0" width="260" height="64"></rect>
+      <text x="18" y="28" class="wf-text">Federated Learning Orchestrator</text>
+      <text x="18" y="48" class="wf-sub">round control / versioning</text>
+    </g>
+
+    <path class="wf-arrow" d="M560 52 L620 52"/>
+
+    <!-- Secure Aggregation -->
+    <g transform="translate(160,140)">
+      <rect class="wf-node wf-box" x="0" y="0" width="320" height="72"></rect>
+      <text x="18" y="36" class="wf-text">Secure Aggregation Layer</text>
+      <text x="18" y="56" class="wf-sub">FedAvg • FedProx • MPC aggregation</text>
+    </g>
+
+    <path class="wf-arrow" d="M740 84 L480 140"/>
+
+    <!-- Compliance Engine -->
+    <g transform="translate(520,240)">
+      <rect class="wf-node wf-box" x="0" y="0" width="300" height="64"></rect>
+      <text x="18" y="30" class="wf-text">Compliance Engine</text>
+      <text x="18" y="50" class="wf-sub">ZKPs • audit proofs • regulator modes</text>
+    </g>
+
+    <path class="wf-arrow" d="M320 176 L520 276"/>
+
+    <!-- Regulator Notifier -->
+    <g transform="translate(880,240)">
+      <rect class="wf-node wf-box" x="0" y="0" width="220" height="64"></rect>
+      <text x="14" y="34" class="wf-text">Regulator Notifier</text>
+      <text x="14" y="54" class="wf-sub">selective alerts / disclosures</text>
+    </g>
+
+    <path class="wf-arrow" d="M820 272 L880 272"/>
+
+    <!-- Ledger / Smart Contracts -->
+    <g transform="translate(160,340)">
+      <rect class="wf-node wf-box" x="0" y="0" width="360" height="72"></rect>
+      <text x="18" y="36" class="wf-text">Contribution Ledger / Smart Contracts</text>
+      <text x="18" y="56" class="wf-sub">immutability • reputation • rewards</text>
+    </g>
+
+    <path class="wf-arrow" d="M660 296 L460 380"/>
+
+    <!-- Marketplace -->
+    <g transform="translate(620,340)">
+      <rect class="wf-node wf-box" x="0" y="0" width="360" height="72"></rect>
+      <text x="18" y="36" class="wf-text">GeFi Marketplace</text>
+      <text x="18" y="56" class="wf-sub">model sales • subscriptions • APIs</text>
+    </g>
+
+    <path class="wf-arrow" d="M520 380 L620 380"/>
+
+    <!-- Rewards Dashed Path -->
+    <path class="wf-arrow" d="M740 382 L420 140" stroke-dasharray="6 4"/>
+    <text x="740" y="360" class="wf-small">rewards → contributors</text>
+
+    <!-- Legend -->
+    <g transform="translate(40,430)">
+      <rect x="0" y="0" width="1120" height="90" rx="8" fill="url(#g1)" stroke="#e6eef3" stroke-opacity="0.6"></rect>
+      <text x="18" y="22" class="wf-text">Notes</text>
+      <text x="18" y="44" class="wf-note">• Raw data stays on-device: only encrypted gradients leave.</text>
+      <text x="18" y="64" class="wf-note">• Compliance layer generates ZK proofs + regulator notifications. Blockchain ledger records value contributions.</text>
+    </g>
+
+  </svg>
+
+  <a class="download-link" href="/mnt/data/GeFi-IUs.pdf" target="_blank" rel="noopener" style="font-size:13px;color:#0b61ff;margin-top:6px;display:inline-block;">
+    Download related PDF (GeFi-IUs.pdf)
+  </a>
+</div>
