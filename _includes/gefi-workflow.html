@@ -1,10 +1,10 @@
-<!-- Fixed, fully visible, responsive SVG workflow diagram with bidirectional loop arrows -->
 <style>
   .gefi-workflow-svg {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     display: block;
     margin: 0 auto;
+    overflow: visible; /* Allows content like arrows to slightly overflow if needed */
   }
   .gefi-workflow-wrapper {
     background: transparent;
@@ -12,7 +12,7 @@
     text-align: center;
   }
 
-  /* Default = dark theme (matches the screenshots) */
+  /* Default = dark theme */
   .gefi-node {
     fill: #ffffff;
     stroke: #777777;
@@ -29,11 +29,22 @@
     stroke-width: 3;
     fill: none;
   }
+  .gefi-input-group {
+    fill: #4CAF50; /* Green highlight for the starting group */
+    stroke: #388E3C;
+    stroke-width: 2;
+    rx: 12;
+    ry: 12;
+  }
+  .gefi-compliance-node {
+    fill: #FF9800; /* Orange highlight for compliance nodes */
+    stroke: #E65100;
+  }
 
   /* Light theme override */
   @media (prefers-color-scheme: light) {
     .gefi-node {
-      fill: #f9f9f9 !important;
+      fill: #f0f0f0 !important;
       stroke: #444444 !important;
     }
     .gefi-text {
@@ -42,51 +53,84 @@
     .gefi-arrow {
       stroke: #555555 !important;
     }
+    .gefi-input-group {
+      fill: #DCF8E0 !important;
+      stroke: #388E3C !important;
+    }
+    .gefi-compliance-node {
+      fill: #FFF3E0 !important;
+      stroke: #E65100 !important;
+    }
   }
 </style>
 
 <div class="gefi-workflow-wrapper">
-<svg class="gefi-workflow-svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid meet">
+<svg class="gefi-workflow-svg" viewBox="0 0 1200 680" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="currentColor"/>
+    <marker id="arrowhead" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto" style="color: currentColor;">
+      <path d="M0,0 L10,5 L0,10 Z" style="fill: currentColor;"/>
+    </marker>
+    <marker id="arrowhead-reverse" markerWidth="12" markerHeight="10" refX="0" refY="5" orient="auto" style="color: currentColor;">
+      <path d="M10,0 L0,5 L10,10 Z" style="fill: currentColor;"/>
     </marker>
   </defs>
 
-  <!-- ========== NODES ========== -->
-  <rect x="40" y="80" width="260" height="70" rx="16" class="gefi-node"/>
-  <text x="170" y="108" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Local Clients</text>
-  <text x="170" y="135" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Train privately on-device)</text>
+  <rect x="450" y="20" width="300" height="70" rx="12" class="gefi-input-group" />
+  <text x="600" y="58" text-anchor="middle" class="gefi-text" style="font-size:20px; font-weight:700;">Stakeholders (Devs + FIs + Data Providers)</text>
+  
+  <rect x="450" y="120" width="300" height="70" rx="16" class="gefi-node"/>
+  <text x="600" y="148" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Local Model Agents</text>
+  <text x="600" y="175" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Training on private, I-device data)</text>
 
-  <rect x="380" y="80" width="260" height="70" rx="16" class="gefi-node"/>
-  <text x="510" y="108" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Secure Aggregation</text>
-  <text x="510" y="135" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(HE + DP + ZKPs)</text>
+  <rect x="450" y="220" width="300" height="70" rx="16" class="gefi-node"/>
+  <text x="600" y="248" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Federated Learning Orchestrator</text>
+  <text x="600" y="275" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Manages update cycles & encryption)</text>
 
-  <rect x="740" y="80" width="260" height="70" rx="16" class="gefi-node"/>
-  class="gefi-node"/>
-  <text x="870" y="108" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Global Model Update</text>
-  <text x="870" y="135" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(FedAvg / FedProx)</text>
+  <rect x="450" y="320" width="300" height="70" rx="16" class="gefi-node"/>
+  <text x="600" y="348" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Secure Aggregation Layer</text>
+  <text x="600" y="375" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(FedAvg, FedProx, HE, DP, ZKPs)</text>
+  
+  <rect x="450" y="420" width="300" height="70" rx="16" class="gefi-compliance-node"/>
+  <text x="600" y="448" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Compliance Engine</text>
+  <text x="600" y="475" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Pre-distribution review)</text>
 
-  <rect x="380" y="200" width="260" height="70" rx="16" class="gefi-node"/>
-  <text x="510" y="228" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Model Marketplace</text>
-  <text x="510" y="255" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">Incentives & Monetization</text>
+  <rect x="790" y="420" width="230" height="70" rx="16" class="gefi-compliance-node"/>
+  <text x="905" y="448" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Regulator Notifier</text>
+  <text x="905" y="475" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Reporting & Auditing)</text>
+  
+  <rect x="450" y="520" width="300" height="70" rx="16" class="gefi-node"/>
+  <text x="600" y="548" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">Contribution Ledger</text>
+  <text x="600" y="575" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Smart Contracts, Provenance, Rating)</text>
 
-  <!-- ========== ARROWS ========== -->
-  <!-- Top row flow -->
-  <line x1="300" y1="115" x2="380" y2="115" class="gefi-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="640" y1="115" x2="740" y2="115" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  <rect x="450" y="620" width="300" height="70" rx="16" class="gefi-node"/>
+  <text x="600" y="648" text-anchor="middle" class="gefi-text" style="font-size:22px; font-weight:600;">GeFi Marketplace</text>
+  <text x="600" y="675" text-anchor="middle" class="gefi-text" style="font-size:15px; opacity:0.9;">(Model Exchange, Rewards Distribution)</text>
 
-  <!-- Global Model → Marketplace -->
-  <line x1="870" y1="115" x2="870" y2="200" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  
+  <line x1="600" y1="90" x2="600" y2="120" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  
+  <line x1="600" y1="190" x2="600" y2="220" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  <text x="680" y="210" text-anchor="start" class="gefi-text" style="font-size:14px; opacity:0.8;">Encrypted Updates</text>
 
-  <!-- Marketplace → Local Clients (bidirectional part 1) -->
-  <line x1="510" y1="235" x2="380" y2="235" class="gefi-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="380" y1="235" x2="300" y2="150" class="gefi-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="170" y2="115" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="290" x2="600" y2="320" class="gefi-arrow" marker-end="url(#arrowhead)"/>
 
-  <!-- Local Clients → Marketplace (bidirectional part 2) -->
-  <line x1="170" y1="115" x2="300" y2="150" class="gefi-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="380" y2="235" class="gefi-arrow" marker-end="url(#arrowhead)"/>
-  <line x1="380" y1="235" x2="510" y2="235" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="390" x2="600" y2="420" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  
+  <line x1="750" y1="455" x2="790" y2="455" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+
+  <line x1="600" y1="490" x2="600" y2="520" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+
+  <line x1="600" y1="590" x2="600" y2="620" class="gefi-arrow" marker-end="url(#arrowhead)"/>
+
+
+  <path d="M 750 655 C 850 655, 950 455, 950 155, 950 55, 850 55, 750 55" 
+        class="gefi-arrow" marker-end="url(#arrowhead)"/>
+  <text x="1070" y="340" text-anchor="middle" class="gefi-text" style="font-size:16px; font-weight:600; fill: #4CAF50;">New Global Model & Rewards</text>
+  <text x="1070" y="365" text-anchor="middle" class="gefi-text" style="font-size:16px; font-weight:600; fill: #4CAF50;">Distribution</text>
+
+  <path d="M 450 155 C 350 155, 250 455, 250 655, 350 655, 450 655" 
+        class="gefi-arrow" marker-end="url(#arrowhead-reverse)"/>
+  <text x="120" y="420" text-anchor="middle" class="gefi-text" style="font-size:16px; font-weight:600; fill: #2196F3;">Model Utilization & Feedback</text>
+
 </svg>
 </div>
