@@ -58,7 +58,7 @@ external_links:
 external_links_02:
   title: "Need Help?"
   links:
-    - url: ""
+    - url: "/support"
       text: "General Support"
     - url: "#"
       text: "Privacy Officer"
@@ -72,15 +72,13 @@ external_links_03:
   title: "Company"
   links:
     - url: "#"
-      text: "Our Team"
+      text: "Leadership"
     - url: "#"
-      text: "Strategy"
+      text: "Technology"
     - url: "#"
-      text: "Service"
-    - url: "#"
-      text: "Mission"
-    - url: "#"
-      text: "Process"
+      text: "Governance"
+    - url: "/partnerships"
+      text: "Partnerships"
 
 footer_newsletter:
   title: "Our Newsletter"
