@@ -71,7 +71,7 @@ external_links_02:
 external_links_03:
   title: "Company"
   links:
-    - url: ""
+    - url: "/leadership"
       text: "Leadership"
     - url: "#"
       text: "Technology"
