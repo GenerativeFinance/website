@@ -60,8 +60,8 @@ external_links_02:
   links:
     - url: "/support"
       text: "General Support"
-    - url: "#"
-      text: "Privacy Officer"
+    - url: "/funding"
+      text: "Funding"
     - url: "#"
       text: "Security Team"
     - url: "#"
