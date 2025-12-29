@@ -32,14 +32,20 @@ social_accounts:
     - url: "https://www.facebook.com/generativefinance"
       icon: "jam jam-facebook"
 
+    - url: "https://t.me/generativefinance"
+      icon: "jam jam-paper-plane"
+
+    - url: "https://www.instagram.com/generativefinance"
+      icon: "jam jam-instagram"
+
     - url: "https://www.linkedin.com/company/generativefinance"
       icon: "jam jam-linkedin"
-
-    - url: "https://medium.com/generativefinance"
-      icon: "jam jam-medium"
-
-    - url: "https://www.youtube.com/@generativefinance"
+      
+    - url: "https://youtube.com/@generativefinance"
       icon: "jam jam-youtube"
+
+    - url: "https://luma.com/gefi"
+      icon: "star-alt-1"
 
 
 external_links:
